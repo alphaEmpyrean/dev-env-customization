@@ -1,0 +1,78 @@
+format = """
+[](fg:section1)\
+$os\
+$username\
+[](fg:section1 bg:section2)\
+$directory\
+[](fg:section2 bg:section3)\
+$git_branch\
+$git_status\
+[](fg:section3 bg:section4)\
+$dotnet\
+[](fg:section4 bg:section5)\
+$time\
+[ ](fg:section5)\
+"""
+# General Setting
+add_newline = false
+palette = 'custom'
+
+[palettes.custom]
+section1 = '#0B293D'
+section2 = '#22577A'
+section3 = '#38A3A5'
+section4 = '#57CC99'
+section5 = '#80ED99'
+textlight = '#FFFFFF'
+textdark = '#000000'
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = 'bold fg:textlight bg:section1'
+format = "[$symbol ]($style)"
+disabled = false
+
+[os.symbols]
+Windows = ""
+Linux = "󰌽"
+Ubuntu = "󰌽"
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+style_root = 'bold fg:red bg:section1'
+style_user = 'fg:textlight bg:section1'
+format = '[$user ]($style)'
+disabled = false
+
+[directory]
+style = 'bold fg:textlight bg:#22577A'
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bold fg:textdark bg:section3"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bold fg:textdark bg:section3"
+format = '[$all_status$ahead_behind ]($style)'
+
+[dotnet]
+style = "bold fg:textdark bg:section4"
+format = '[$symbol($tfm )]($style)'
+version_format = 'v${major}'
+
+[localip]
+ssh_only = false
+format = '@[$localipv4](bold red) '
+disabled = false
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bold fg:textdark bg:section5"
+format = '[ $time ]($style)'
