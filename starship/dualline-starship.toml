@@ -27,7 +27,7 @@ palette = 'custom'
 
 ### COLOR SCHEME ###
 [palettes.custom]
-section0 = '#000000'
+section0 = '#061621'
 section1 = '#0B293D'
 section2 = '#22577A'
 section3 = '#38A3A5'
