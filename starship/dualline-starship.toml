@@ -34,7 +34,7 @@ textdark = '#000000'
 # represents the current operating system
 [os]
 style = 'bold fg:textlight bg:section0'
-format = "[$symbol ]($style)"
+format = "[$symbol  ]($style)"
 disabled = false
 
 [os.symbols]
@@ -84,4 +84,4 @@ disabled = false
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bold fg:textdark bg:section5"
-format = '[ $time ]($style)'
+format = '[  $time ]($style)'
