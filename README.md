@@ -20,7 +20,7 @@ The Starship prompt is Cross-Shell you can use the Starship custom prompt file j
 4. Get a local copy of the customization files
     - You can either clone this repository or download a copy locally
 
-5. Configure [Starship](https://starship.rs/config/#prompt) to use custom prompt
+5. Configure [Starship](https://starship.rs/config/#configuration) to use custom prompt
     - Make a copy of the Starship TOML file that corresponds to the custom prompt you want and place it in your users .config folder with the name 'starship.toml' (yes, rename it). This method allows you to use the starship file as a starting point for your own customizations with out being tied to the changes made in the repository.
     - Alternatively you can point Starship to the specific prompt file you wish to impliment using environment variables. If you cloned the repository this is a good method to keep the file up to date with any changes made in the repository.
     - If you are using WSL then this also needs to be done within the distribution if you want the custom prompt to apply there.
