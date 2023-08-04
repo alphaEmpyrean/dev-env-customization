@@ -1,3 +1,5 @@
+### PROMPT FORMAT ###
+
 format = """
 [](fg:section0)\
 $os\
@@ -16,10 +18,12 @@ $time\
 [](fg:section5)
 [ ](bold fg:section5)\
 """
-# General Setting
+
+### GENERAL SETTINGS ####
 add_newline = false
 palette = 'custom'
 
+### COLOR SCHEME ###
 [palettes.custom]
 section0 = '#000000'
 section1 = '#0B293D'
@@ -27,13 +31,14 @@ section2 = '#22577A'
 section3 = '#38A3A5'
 section4 = '#57CC99'
 section5 = '#80ED99'
-textlight = '#FFFFFF'
+textlight = '#80ED99'
 textdark = '#000000'
 
+### PROMPT SECTION DETAILS ###
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = 'bold fg:textlight bg:section0'
+style = 'bold fg:white bg:section0'
 format = "[$symbol  ]($style)"
 disabled = false
 
@@ -58,17 +63,17 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bold fg:textlight bg:section2"
+style = "bold fg:textdark bg:section2"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bold fg:textlight bg:section2"
+style = "bold fg:red bg:section2"
 format = '[$all_status$ahead_behind ]($style)'
 
 [docker_context]
 symbol = "󰡨"
 style = "bold fg:textdark bg:section3"
-format = '[ $symbol$context]($style)'
+format = '[ $symbol $context]($style)'
 
 [dotnet]
 style = "bold fg:textdark bg:section4"
