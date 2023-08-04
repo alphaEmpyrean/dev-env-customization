@@ -1,6 +1,7 @@
 ### PROMPT FORMAT ###
 
 format = """
+[┌](section2)\
 [](fg:section0)\
 $os\
 $username\
@@ -16,6 +17,7 @@ $dotnet\
 [](fg:section4 bg:section5)\
 $time\
 [](fg:section5)
+[└](section2)\
 [ ](bold fg:section5)\
 """
 
