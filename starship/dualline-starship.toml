@@ -13,7 +13,7 @@ $git_status\
 [](fg:section2 bg:section3)\
 $docker_context\
 [](fg:section3 bg:section4)\
-$dotnet\
+$kubernetes\
 [](fg:section4 bg:section5)\
 $time\
 [](fg:section5)
@@ -73,14 +73,20 @@ style = "bold fg:red bg:section2"
 format = '[$all_status$ahead_behind ]($style)'
 
 [docker_context]
-symbol = "󰡨"
-style = "bold fg:textdark bg:section3"
-format = '[ $symbol $context]($style)'
-
-[dotnet]
+symbol = ""
 style = "bold fg:textdark bg:section4"
-format = '[$symbol($tfm )]($style)'
-version_format = 'v${major}'
+format = '[ $symbol $context ]($style)'
+
+[kubernetes]
+format = 'on [⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
+disabled = true
+[kubernetes.context_aliases]
+'dev.local.cluster.k8s' = 'dev'
+'.*/openshift-cluster/.*' = 'openshift'
+'gke_.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
+[kubernetes.user_aliases]
+'dev.local.cluster.k8s' = 'dev'
+'root/.*' = 'root'
 
 [localip]
 ssh_only = false
